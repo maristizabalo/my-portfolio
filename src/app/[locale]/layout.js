@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "@fortawesome/fontawesome-svg-core/styles.css"
 import { useLocale } from "next-intl";
 import Navbar from "../../components/main/Navbar";
 import StarsCanvas from "../../components/main/StarBackground";

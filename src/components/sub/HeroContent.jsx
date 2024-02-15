@@ -8,8 +8,10 @@ import {
 } from "../../../utils/motion";
 import {SparklesIcon} from '@heroicons/react/24/solid'
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const HeroContent = () => {
+  const t = useTranslations('HeroContent')
   return (
     <motion.div
       initial="hidden"
