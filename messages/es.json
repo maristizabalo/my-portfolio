@@ -1,0 +1,14 @@
+{
+    "Index": {
+        "title": "Hola Mundo!"
+    },
+    "Navbar":{
+        "about-me": "Acerca de mi",
+        "skills": "Habilidades",
+        "projects": "Proyectos"
+    },
+    "Language":{
+        "english": "Ingles",
+        "spanish": "Español"
+    }
+}
