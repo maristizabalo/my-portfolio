@@ -1,9 +1,12 @@
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-
 export default function Home() {
-  const t = useTranslations('Index');
   return (
-    <div className="bg-blue-700">{t('title')}</div>
+    <main className='h-full w-full'>
+      <div className='flex flex-col gap-20'>
+        <Hero />
+        {/* <Skills />
+        <Encryption />
+        <Projects /> */}
+      </div>
+    </main>
   );
 }
