@@ -14,9 +14,9 @@ const Navbar = () => {
                     className="h-auto w-auto flex flex-row items-center"
                 >
                     <Image
-                        src="/NavLogo.png"
+                        src="/logo_e.png"
                         alt="logo"
-                        width={70}
+                        width={50}
                         height={70}
                         className="cursor-pointer hover:animate-slowspin"
                     />
