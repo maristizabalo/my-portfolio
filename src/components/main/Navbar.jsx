@@ -8,14 +8,14 @@ import { faFolderOpen, faHome, faLanguage, faMoon, faSun, faTools } from "@forta
 const Navbar = () => {
     const t = useTranslations('Navbar')
     // const [darkMode, setDarkMode] = useState('false)
-    const darkMode = false
+    const darkMode = true
 
     return (
-        <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#fff]/50 bg-[#03001417] backdrop-blur-md z-50 px-10">
-            <div className="w-full h-full grid grid-cols-12 gap-4 items-center justify-between m-auto px-[10px]">
+        <div className="w-full h-[65px] fixed top-0 shadow-lg  bg-transparent z-50 px-10">
+            <div className="w-full h-full grid grid-cols-3 gap-4 items-center justify-between m-auto px-[10px]">
                 <a
                     href="#about-me"
-                    className="h-auto w-auto col-span-3 flex items-center"
+                    className="h-auto w-auto col-span-1 flex items-center"
                 >
                     <Image
                         src="/logo_e.png"
@@ -29,14 +29,12 @@ const Navbar = () => {
                         Mj Aristizabal
                     </span>
                 </a>
-
-
-                <div className="w-[500px] h-full col-span-6 flex items-center  justify-center md:mr-20">
-                    <div className="flex items-center justify-between w-full h-auto">
+                <div className="col-span-1 gap-5 flex items-center justify-center">
+                    <div className="flex items-center p-1 h-auto justify-center border border-solid border-gray-500 rounded-full">
                         {/* Burbuja 1 - Inicio */}
                         <div className="bubble-container">
                             <div className="bubble hover:bubble-expand">
-                                <FontAwesomeIcon icon={faHome} className="icon" />
+                                <FontAwesomeIcon icon={faHome} className="icon"/>
                                 <span className="label">Inicio</span>
                             </div>
                         </div>
@@ -79,7 +77,8 @@ const Navbar = () => {
 
 
 
-                <div className="col-span-3 gap-5 flex items-center justify-center">
+
+                <div className="col-span-1 gap-5 flex items-center justify-center">
                     {Socials.map((social) => (
                         <Image
                             src={social.src}

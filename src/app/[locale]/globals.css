@@ -31,30 +31,27 @@
 
 .bubble-container {
     text-align: center;
-    margin: 0 15px;
 }
 
 .bubble {
     position: relative;
-    background-color: #030014;
+    background-color: #ffffff;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
+    margin: 0 2px;
 }
 
-.bubble:hover .label {
+.bubble:hover .label{
     opacity: 1;
     transform: translateY(0);
 }
 
 .icon {
-    color: #fff; /* Cambia el color del icono a blanco */
-    font-size: 90%; /* Hace el icono el 90% del tamaño del círculo */
+    color: #00ff51; /* Cambia el color del icono a blanco */
+    font-size: 150%;
+    margin-top: 5px;
 }
 
 .label {
@@ -62,10 +59,10 @@
     opacity: 0;
     transform: translateY(10px);
     text-align: center;
-    color: #fff;
+    color: #ff00c8;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.bubble-expand:hover {
+.bubble:hover, .icon:hover {
     transform: scale(1.1);
 }
