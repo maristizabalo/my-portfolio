@@ -1,12 +1,15 @@
+'use client'
+
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+// import { useTranslations } from "next-intl";
 import { Socials } from "../../../constants";
 import LocalSwitcher from "../sub/local-switcher";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFolderOpen, faHome, faLanguage, faMoon, faSun, faTools } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
-    const t = useTranslations('Navbar')
+    // const t = useTranslations('Navbar')
     // const [darkMode, setDarkMode] = useState('false)
     const darkMode = true
 
@@ -30,11 +33,16 @@ const Navbar = () => {
                     </span>
                 </a>
                 <div className="col-span-1 gap-5 flex items-center justify-center">
-                    <div className="flex items-center p-1 h-auto justify-center border border-solid border-gray-500 rounded-full">
+                    <motion.div
+                        className="flex items-center p-1 h-auto justify-center border border-solid border-gray-500 rounded-full"
+                        whileHover={{ scale: 1.2 }}
+                        onHoverStart={e => { }}
+                        onHoverEnd={e => { }}
+                    >
                         {/* Burbuja 1 - Inicio */}
                         <div className="bubble-container">
                             <div className="bubble hover:bubble-expand">
-                                <FontAwesomeIcon icon={faHome} className="icon"/>
+                                <FontAwesomeIcon icon={faHome} className="icon" />
                                 <span className="label">Inicio</span>
                             </div>
                         </div>
@@ -69,9 +77,10 @@ const Navbar = () => {
                                 <FontAwesomeIcon icon={faLanguage} className="icon" />
                                 {/* <LocalSwitcher /> */}
                                 <span className="label">Idioma</span>
+                                <LocalSwitcher />
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
 
 
