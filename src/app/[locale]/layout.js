@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   const locale = useLocale();
   return (
     <html lang={locale}>
-      <body className={`${inter.className} bg-[#FFFFFF] overflow-y-scroll overflow-x-hidden`}>
+      <body className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}>
         <StarsCanvas />
         <Navbar />
         {children}
