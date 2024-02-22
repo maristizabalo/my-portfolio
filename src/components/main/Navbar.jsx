@@ -1,14 +1,26 @@
+'use client'
+
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+// import { useTranslations } from "next-intl";
 import { Socials } from "../../../constants";
 import LocalSwitcher from "../sub/local-switcher";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFolderOpen, faHome, faLanguage, faMoon, faSun, faTools } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
+
 
 const Navbar = () => {
-    const t = useTranslations('Navbar')
+    // const t = useTranslations('Navbar')
     // const [darkMode, setDarkMode] = useState('false)
     const darkMode = true
+    const containerVariants = {
+        hover: {
+            scale: 1.2, // Puedes ajustar este valor según tus necesidades
+        },
+        normal: {
+            scale: 1,
+        },
+    };
 
     return (
         <div className="w-full h-[65px] fixed top-0 shadow-lg  bg-transparent z-50 px-10">
@@ -29,12 +41,17 @@ const Navbar = () => {
                         Mj Aristizabal
                     </span>
                 </a>
-                <div className="col-span-1 gap-5 flex items-center justify-center">
+                <motion.div
+                    className="col-span-1 gap-5 flex items-center justify-center"
+                    variants={containerVariants}
+                    whileHover="hover"
+                    initial="normal"
+                >
                     <div className="flex items-center p-1 h-auto justify-center border border-solid border-gray-500 rounded-full">
                         {/* Burbuja 1 - Inicio */}
                         <div className="bubble-container">
                             <div className="bubble hover:bubble-expand">
-                                <FontAwesomeIcon icon={faHome} className="icon"/>
+                                <FontAwesomeIcon icon={faHome} className="icon" />
                                 <span className="label">Inicio</span>
                             </div>
                         </div>
@@ -72,7 +89,7 @@ const Navbar = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
 
 
