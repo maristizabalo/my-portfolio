@@ -7,6 +7,7 @@ import LocalSwitcher from "../sub/local-switcher";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFolderOpen, faHome, faLanguage, faMoon, faSun, faTools } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 
 const Navbar = () => {
@@ -23,7 +24,7 @@ const Navbar = () => {
     };
 
     return (
-        <div className="w-full h-[65px] fixed top-0 shadow-lg  bg-transparent z-50 px-10">
+        <div className="w-full h-[65px] fixed top-0 shadow-lg  backdrop-blur-md z-50 px-10">
             <div className="w-full h-full grid grid-cols-3 gap-4 items-center justify-between m-auto px-[10px]">
                 <a
                     href="#about-me"
@@ -49,28 +50,28 @@ const Navbar = () => {
                 >
                     <div className="flex items-center p-1 h-auto justify-center border border-solid border-gray-500 rounded-full">
                         {/* Burbuja 1 - Inicio */}
-                        <div className="bubble-container">
+                        <Link className="bubble-container" href={"/"}>
                             <div className="bubble hover:bubble-expand">
                                 <FontAwesomeIcon icon={faHome} className="icon" />
                                 <span className="label">Inicio</span>
                             </div>
-                        </div>
+                        </Link>
 
                         {/* Burbuja 2 - Habilidades */}
-                        <div className="bubble-container">
+                        <Link className="bubble-container" href={"/skills"}>
                             <div className="bubble hover:bubble-expand">
                                 <FontAwesomeIcon icon={faTools} className="icon" />
                                 <span className="label">Habilidades</span>
                             </div>
-                        </div>
+                        </Link>
 
                         {/* Burbuja 3 - Proyectos */}
-                        <div className="bubble-container">
+                        <Link className="bubble-container" href={"/[locale]/projects"}>
                             <div className="bubble hover:bubble-expand">
                                 <FontAwesomeIcon icon={faFolderOpen} className="icon" />
                                 <span className="label">Proyectos</span>
                             </div>
-                        </div>
+                        </Link>
 
                         {/* Burbuja 4 - Dark Mode/Light Mode */}
                         <div className="bubble-container">

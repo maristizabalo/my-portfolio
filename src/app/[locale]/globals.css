@@ -59,7 +59,7 @@
     opacity: 0;
     transform: translateY(10px);
     text-align: center;
-    color: #ff00c8;
+    color: #ffffffca;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
